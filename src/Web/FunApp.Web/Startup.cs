@@ -10,9 +10,10 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using FunApp.Web.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using FunApp.Web.Models;
+using FunApp.Web.Areas.Identity.Data;
 
 namespace FunApp.Web
 {
@@ -35,12 +36,12 @@ namespace FunApp.Web
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>()
-                .AddDefaultUI(UIFramework.Bootstrap4)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddDbContext<FunnAppContext>(options =>
+                    options.UseSqlServer(
+                        this.Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddDefaultIdentity<FunAppUser>()
+                .AddEntityFrameworkStores<FunnAppContext>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
