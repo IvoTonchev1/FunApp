@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using FunApp.Web.Areas.Identity.Data;
+using FunApp.Data.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace FunApp.Web.Models
+namespace FunApp.Data
 {
-    public class FunnAppContext : IdentityDbContext<FunAppUser>
+    public class FunAppContext : IdentityDbContext<FunAppUser>
     {
-        public FunnAppContext(DbContextOptions<FunnAppContext> options)
+        public FunAppContext(DbContextOptions<FunAppContext> options)
             : base(options)
         {
         }
