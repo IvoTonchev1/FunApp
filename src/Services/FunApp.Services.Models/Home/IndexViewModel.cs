@@ -1,6 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using FunApp.Sevices.Models.Home;
+using System.Collections.Generic;
 
-namespace FunApp.Web.Models.Home
+namespace FunApp.Services.Models.Home
 {
     public class IndexViewModel
     {

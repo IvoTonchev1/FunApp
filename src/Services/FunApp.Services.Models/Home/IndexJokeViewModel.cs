@@ -1,4 +1,4 @@
-﻿namespace FunApp.Web.Models.Home
+﻿namespace FunApp.Sevices.Models.Home
 {
     public class IndexJokeViewModel
     {
