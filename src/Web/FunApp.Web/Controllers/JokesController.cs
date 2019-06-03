@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FunApp.Services.DataServices;
+using FunApp.Services.Models.Jokes;
 using FunApp.Web.Model.Jokes;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -47,7 +48,7 @@ namespace FunApp.Web.Controllers
 
         public IActionResult Details(int id)
         {
-            var joke = this.jokesService.GetJokeById(id);
+            var joke = this.jokesService.GetJokeById<JokeDetailsViewModel>(id);
 
             return this.View(joke);
         }

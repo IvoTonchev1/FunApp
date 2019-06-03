@@ -48,9 +48,9 @@ namespace FunApp.Services.DataServices
             return joke.Id;
         }
 
-        public JokeDetailsViewModel GetJokeById(int id)
+        public TViewModel GetJokeById<TViewModel>(int id)
         {
-            var joke = this.jokesRepo.All().Where(x => x.Id == id).To<JokeDetailsViewModel>().FirstOrDefault();
+            var joke = this.jokesRepo.All().Where(x => x.Id == id).To<TViewModel>().FirstOrDefault();
 
             return joke;
         }
