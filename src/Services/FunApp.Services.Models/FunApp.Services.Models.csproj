@@ -5,7 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Categories\" />
+    <ProjectReference Include="..\..\Data\FunApp.Data.Models\FunApp.Data.Models.csproj" />
+    <ProjectReference Include="..\FunApp.Services.Mapping\FunApp.Services.Mapping.csproj" />
   </ItemGroup>
 
   <ItemGroup>
