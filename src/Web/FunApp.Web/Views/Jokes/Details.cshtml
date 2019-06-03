@@ -1,0 +1,28 @@
+﻿@model FunApp.Services.Models.Jokes.JokeDetailsViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Content)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Content)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CategoryName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CategoryName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index" asp-controller="Home">Back to Index</a>
+</div>

@@ -10,7 +10,10 @@
         <div class="col-md-4 clearfix">
             <div class="card">
                 <div class="card-body">@joke.Content</div>
-                <div class="card-footer">@joke.CategoryName</div>
+                <div class="card-footer">
+                    @joke.CategoryName
+                    <a class="btn btn-sm" asp-controller="Jokes" asp-action="Details" asp-route-id="@joke.Id">View</a>
+                </div>
             </div>
         </div>
     }
